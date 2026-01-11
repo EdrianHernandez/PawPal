@@ -4,9 +4,9 @@ import AnimalGrid from './components/AnimalGrid';
 import SuccessStories from './components/SuccessStories';
 import ShelterInfo from './components/ShelterInfo';
 
-const App: React.FC = () => {
-  const [activeCategory, setActiveCategory] = useState<string>('All');
-  const [searchTerm, setSearchTerm] = useState<string>('');
+const App = () => {
+  const [activeCategory, setActiveCategory] = useState('All');
+  const [searchTerm, setSearchTerm] = useState('');
 
   return (
     <div className="min-h-screen flex flex-col font-sans bg-orange-50/30">
@@ -21,7 +21,7 @@ const App: React.FC = () => {
           </div>
           <div className="flex gap-4">
              <button className="hidden sm:block text-slate-600 hover:text-orange-500 font-medium transition-colors">
-              About Us
+               About Us
             </button>
             <button className="bg-orange-500 hover:bg-orange-600 text-white px-5 py-2 rounded-full font-medium transition-colors text-sm shadow-md hover:shadow-lg transform active:scale-95">
               Donate Now
