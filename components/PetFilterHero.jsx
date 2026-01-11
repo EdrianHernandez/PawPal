@@ -1,13 +1,6 @@
 import React from 'react';
 
-interface PetFilterHeroProps {
-  activeCategory: string;
-  setCategory: (category: string) => void;
-  searchTerm: string;
-  setSearchTerm: (term: string) => void;
-}
-
-const PetFilterHero: React.FC<PetFilterHeroProps> = ({ activeCategory, setCategory, searchTerm, setSearchTerm }) => {
+const PetFilterHero = ({ activeCategory, setCategory, searchTerm, setSearchTerm }) => {
   const categories = ['All', 'Dog', 'Cat', 'Other'];
 
   return (
