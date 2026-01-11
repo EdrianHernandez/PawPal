@@ -1,6 +1,6 @@
 import React from 'react';
 
-const SuccessStories: React.FC = () => {
+const SuccessStories = () => {
   const stories = [
     {
       id: 1,
