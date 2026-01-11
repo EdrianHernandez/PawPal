@@ -1,22 +1,6 @@
 import React from 'react';
 
-interface Animal {
-  id: number;
-  name: string;
-  type: string;
-  breed: string;
-  age: string;
-  image: string;
-  badge?: string;
-  gender: 'Male' | 'Female';
-}
-
-interface AnimalGridProps {
-  activeCategory: string;
-  searchTerm: string;
-}
-
-const animals: Animal[] = [
+const animals = [
   { id: 1, name: 'Bella', type: 'Dog', breed: 'Golden Retriever', age: '2 years', gender: 'Female', image: 'https://images.unsplash.com/photo-1552053831-71594a27632d?q=80&w=662&auto=format&fit=crop', badge: 'New Arrival' },
   { id: 2, name: 'Luna', type: 'Cat', breed: 'Siamese Mix', age: '4 years', gender: 'Female', image: 'https://images.unsplash.com/photo-1513245543132-31f507417b26?q=80&w=800&auto=format&fit=crop' },
   { id: 3, name: 'Charlie', type: 'Dog', breed: 'Beagle', age: '1 year', gender: 'Male', image: 'https://images.unsplash.com/photo-1537151608828-ea2b11777ee8?q=80&w=800&auto=format&fit=crop' },
@@ -27,7 +11,7 @@ const animals: Animal[] = [
   { id: 8, name: 'Simba', type: 'Cat', breed: 'Maine Coon', age: '2 years', gender: 'Male', image: 'https://images.unsplash.com/photo-1533738363-b7f9aef128ce?q=80&w=800&auto=format&fit=crop' },
 ];
 
-const AnimalGrid: React.FC<AnimalGridProps> = ({ activeCategory, searchTerm }) => {
+const AnimalGrid = ({ activeCategory, searchTerm }) => {
   const filteredAnimals = animals.filter((animal) => {
     const matchesCategory = activeCategory === 'All' || animal.type === activeCategory;
     const matchesSearch = 
